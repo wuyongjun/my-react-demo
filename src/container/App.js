@@ -9,6 +9,14 @@ const Title = Styled.h2`
   color: #396;
   text-align: center
 `;
+const Container = Styled.div`
+  width: 400px;
+  height: 200px;
+  background: orange;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
 
 class App extends Component {
   constructor (props) {
@@ -19,7 +27,7 @@ class App extends Component {
       persons: [{ id: 1, name: 'wuyongjun', job: 'worker'},
                 { id: 2, name: 'zhanglingchun', job: 'doctor'},
                 { id: 3, name: 'dingpeng', job: 'teacher'}],
-      isShowPerson: true
+      isShowPerson: false
     }
   }
 
@@ -103,7 +111,10 @@ class App extends Component {
             {persons}
             {/* <input type="text" name="test" ref={(input) => this.test = input} onChange={this.changeTest.bind(this)} /> */}
           </div>
-          <Title>this is a Styled title</Title>
+          <Container>
+            <Title>this is a Styled title</Title>
+          </Container>
+          
         </header>
         
       </div>
